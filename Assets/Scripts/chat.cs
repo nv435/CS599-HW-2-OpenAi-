@@ -10,7 +10,7 @@ using TMPro;
 
 public class chat : MonoBehaviour
 {
-    private string api_key = "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";
+    private string api_key = "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";
     public const string API_URL = "https://api.openai.com/v1/chat/completions";
     public const string Model = "gpt-3.5-turbo";
     public int timeBetweenRequests; //time in seconds

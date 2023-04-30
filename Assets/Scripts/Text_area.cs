@@ -14,6 +14,7 @@ public class Text_area : MonoBehaviour
     public TMP_Text tm2;
     public Button change;
     public Button chat_redirect;
+    public Button quiz_button;
     public string second_scene;
 
     // for configuration of API keys
@@ -34,6 +35,8 @@ public class Text_area : MonoBehaviour
 
         Button chat_change = chat_redirect.GetComponent<Button>();
         chat_change.onClick.AddListener(Change_screen);
+
+        quiz_button.onClick.AddListener(quiz_change);
         tm.text = "20+10"; // Maths Questioning Area
         //Debug.Log(tm);
         tm2.text = "Answering Area"; // solutation area
@@ -56,5 +59,10 @@ public class Text_area : MonoBehaviour
     void Change_screen()
     {
         SceneManager.LoadScene(second_scene);
+    }
+
+    void quiz_change()
+    {
+        SceneManager.LoadScene("Quiz");
     }
 }
